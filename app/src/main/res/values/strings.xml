@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="icone_ecrire">Icone ecrire</string>
+    <string name="icone_supprimer">Icone supprimer</string>
+</resources>
