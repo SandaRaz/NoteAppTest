@@ -2,4 +2,7 @@
     <string name="app_name">NoteApp</string>
     <string name="icone_ecrire">Icone ecrire</string>
     <string name="icone_supprimer">Icone supprimer</string>
+    <string name="note_title">Titre de la note</string>
+    <string name="note_description">Description de la note</string>
+    <string name="create_note">Creer la note</string>
 </resources>
