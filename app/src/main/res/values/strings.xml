@@ -5,4 +5,5 @@
     <string name="note_title">Titre de la note</string>
     <string name="note_description">Description de la note</string>
     <string name="create_note">Creer la note</string>
+    <string name="update_note">Sauvegarder</string>
 </resources>

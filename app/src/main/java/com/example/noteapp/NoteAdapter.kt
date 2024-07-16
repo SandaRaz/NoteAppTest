@@ -1,5 +1,6 @@
 package com.example.noteapp
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ class NoteAdapter(var notes: List<NoteModel>, var listener: NoteListener): Recyc
 
     interface NoteListener {
         fun onItemClicked(position: Int)
+        fun onDeleteNoteClicked(position: Int)
     }
 
     class NoteViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -32,10 +34,17 @@ class NoteAdapter(var notes: List<NoteModel>, var listener: NoteListener): Recyc
     // permet de donner des valeurs a nos TextView
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
         val note = notes[position]
+
         holder.noteTitleTextView.text = note.title
         holder.noteDescTextView.text = note.desc
+        holder.deleteNoteButton.setOnClickListener {
+            listener.onDeleteNoteClicked(position)
+        }
         holder.itemView.setOnClickListener {
             listener.onItemClicked(position)
         }
+
+        val logs = "Binding ViewHolder, notes: ${MainActivity.printNotes(notes)}"
+        Log.d("OnBindNoteAdapter",logs)
     }
 }
